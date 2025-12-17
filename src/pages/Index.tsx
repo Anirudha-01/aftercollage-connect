@@ -1,11 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/sections/Hero";
+import Problem from "@/components/sections/Problem";
+import Solution from "@/components/sections/Solution";
+import AppDemo from "@/components/sections/AppDemo";
+import Features from "@/components/sections/Features";
+import Hierarchy from "@/components/sections/Hierarchy";
+import Investor from "@/components/sections/Investor";
+import Monetization from "@/components/sections/Monetization";
+import TechStack from "@/components/sections/TechStack";
+import CTA from "@/components/sections/CTA";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <Hero />
+      <div id="problem">
+        <Problem />
+      </div>
+      <div id="solution">
+        <Solution />
+      </div>
+      <AppDemo />
+      <Features />
+      <Hierarchy />
+      <div id="investors">
+        <Investor />
+      </div>
+      <Monetization />
+      <TechStack />
+      <div id="cta">
+        <CTA />
       </div>
     </div>
   );
