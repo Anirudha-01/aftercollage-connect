@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { TrendingUp, Users, Building2, Repeat, Zap } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const investorPoints = [
   {
@@ -30,11 +31,38 @@ const investorPoints = [
 ];
 
 const stats = [
-  { value: "50K+", label: "Colleges in India" },
-  { value: "40M+", label: "College Students" },
-  { value: "100+", label: "Daily App Opens" },
-  { value: "4+", label: "Years of Usage" },
+  { value: 50, suffix: "K+", label: "Colleges in India" },
+  { value: 40, suffix: "M+", label: "College Students" },
+  { value: 100, suffix: "+", label: "Daily App Opens" },
+  { value: 4, suffix: "+", label: "Years of Usage" },
 ];
+
+const AnimatedCounter = ({ value, suffix, label }: { value: number; suffix: string; label: string }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, value, {
+        duration: 2,
+        ease: "easeOut",
+      });
+      return controls.stop;
+    }
+  }, [isInView, value, count]);
+
+  return (
+    <div ref={ref} className="glass-strong rounded-2xl p-6 text-center">
+      <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
+        <motion.span>{rounded}</motion.span>
+        {suffix}
+      </div>
+      <div className="text-sm text-muted-foreground">{label}</div>
+    </div>
+  );
+};
 
 const Investor = () => {
   return (
@@ -67,10 +95,7 @@ const Investor = () => {
           className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16"
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="glass-strong rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </div>
+            <AnimatedCounter key={stat.label} value={stat.value} suffix={stat.suffix} label={stat.label} />
           ))}
         </motion.div>
 
