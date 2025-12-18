@@ -37,11 +37,11 @@ const Navbar = () => {
     }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass-strong py-3" : "py-6"}`}>
         <div className="container-custom px-4 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl border-2 border-primary/50 bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-              <span className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">af</span>
+          <a href="#" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/30">
+              <span className="text-lg font-bold text-primary-foreground">af</span>
             </div>
-            <span className="text-xl font-bold hidden sm:block">AfterCollage</span>
+            <span className="text-xl font-bold text-foreground hidden sm:block">AfterCollage</span>
           </a>
 
           {/* Desktop nav */}
