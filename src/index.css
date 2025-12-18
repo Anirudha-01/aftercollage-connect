@@ -36,14 +36,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96%;
-    --foreground: 0 0% 9%;
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 9%;
+    --card: 222 47% 14%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 89%;
-    --popover-foreground: 0 0% 9%;
+    --popover: 222 47% 16%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 243 75% 58%;
     --primary-foreground: 225 100% 96%;
@@ -51,17 +51,17 @@
     --secondary: 0 0% 32%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 63%;
-    --muted-foreground: 0 0% 9%;
+    --muted: 217 33% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 250 100% 97%;
-    --accent-foreground: 258 89% 66%;
+    --accent: 261 72% 22%;
+    --accent-foreground: 255 91% 76%;
 
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 85% 97%;
 
-    --border: 0 0% 83%;
-    --input: 0 0% 83%;
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
     --ring: 243 75% 58%;
 
     --radius: 1.25rem;
@@ -90,13 +90,13 @@
     --chart-4: 238 83% 66%;
     --chart-5: 0 0% 45%;
 
-    --sidebar: 0 0% 98%;
-    --sidebar-foreground: 0 0% 9%;
+    --sidebar: 222 47% 14%;
+    --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 243 75% 58%;
     --sidebar-primary-foreground: 225 100% 96%;
-    --sidebar-accent: 0 0% 32%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 83%;
+    --sidebar-accent: 261 72% 22%;
+    --sidebar-accent-foreground: 255 91% 76%;
+    --sidebar-border: 217 33% 25%;
     --sidebar-ring: 243 75% 58%;
 
     --font-sans: 'Lato', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
