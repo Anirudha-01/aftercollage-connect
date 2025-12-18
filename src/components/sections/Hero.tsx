@@ -5,14 +5,14 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/10 animate-gradient bg-300%" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/5" />
       
       {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(167,139,250,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(167,139,250,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
       
       {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[128px] animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/30 rounded-full blur-[128px] animate-float" style={{ animationDelay: "-3s" }} />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[150px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/20 rounded-full blur-[150px]" />
       
       <div className="container-custom relative z-10 text-center px-4">
         <motion.div
@@ -38,7 +38,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-4 text-balance"
+          className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-4 text-balance leading-relaxed"
         >
           The virtual college ecosystem that connects students, teachers, and alumni in one unified digital campus.
         </motion.p>
@@ -47,7 +47,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-lg text-primary/80 font-medium mb-12"
+          className="text-lg text-accent font-medium mb-12"
         >
           "It's a college, after college."
         </motion.p>
