@@ -38,8 +38,8 @@ const Navbar = () => {
         <div className="container-custom px-4 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
-              <span className="text-lg font-bold text-primary-foreground">af</span>
+            <div className="w-10 h-10 rounded-xl border-2 border-primary/50 bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+              <span className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">af</span>
             </div>
             <span className="text-xl font-bold hidden sm:block">AfterCollage</span>
           </a>
