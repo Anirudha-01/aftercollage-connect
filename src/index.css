@@ -181,9 +181,23 @@
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-r from-primary via-purple-soft to-accent;
-    background-size: 200% auto;
-    animation: gradient-shift 15s ease infinite;
+    @apply bg-gradient-to-r from-primary via-purple-soft to-accent relative overflow-hidden;
+  }
+
+  .gradient-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.2) 40%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.2) 60%,
+      transparent 80%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-slow 4s ease-in-out infinite;
   }
 
   .gradient-border {
@@ -339,6 +353,15 @@
 }
 
 /* Custom Keyframes */
+@keyframes shimmer-slow {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 @keyframes gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
