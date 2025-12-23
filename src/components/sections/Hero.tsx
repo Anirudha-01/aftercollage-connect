@@ -5,46 +5,46 @@ import { DoodleStar, DoodleHeart, DoodleSpiral, DoodleBolt } from "../Doodles";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-background to-secondary/10" />
+      {/* Light playful gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/10" />
       
-      {/* Playful grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(236,72,153,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(236,72,153,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      {/* Soft grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(236,72,153,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(236,72,153,0.06)_1px,transparent_1px)] bg-[size:50px_50px]" />
       
-      {/* Fun floating orbs */}
+      {/* Fun floating color blobs */}
       <motion.div 
-        className="absolute top-1/4 left-1/4 w-80 h-80 bg-primary/25 rounded-full blur-[120px]"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/30 to-purple-soft/20 rounded-full blur-[100px]"
+        animate={{ scale: [1, 1.2, 1], x: [0, 20, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div 
+        className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-secondary/40 to-accent/20 rounded-full blur-[80px]"
+        animate={{ scale: [1.2, 1, 1.2], y: [0, -30, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div 
-        className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-secondary/30 rounded-full blur-[100px]"
-        animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.6, 0.4] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div 
-        className="absolute top-1/2 right-1/3 w-64 h-64 bg-accent/20 rounded-full blur-[80px]"
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.4, 0.3] }}
+        className="absolute top-1/2 right-1/3 w-72 h-72 bg-gradient-to-br from-accent/25 to-secondary/15 rounded-full blur-[70px]"
+        animate={{ scale: [1, 1.3, 1], x: [0, -20, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div 
-        className="absolute bottom-1/3 left-1/3 w-56 h-56 bg-purple-soft/25 rounded-full blur-[90px]"
-        animate={{ scale: [1.1, 1, 1.1] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-gradient-to-br from-purple-soft/30 to-primary/20 rounded-full blur-[90px]"
+        animate={{ scale: [1.1, 1, 1.1], y: [0, 20, 0] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
       />
 
       {/* Decorative doodles around hero */}
       <div className="absolute top-32 left-[15%] hidden lg:block">
-        <DoodleStar className="text-secondary w-8 h-8 animate-float-slow" />
+        <DoodleStar className="text-primary w-10 h-10 opacity-70" />
       </div>
       <div className="absolute top-48 right-[12%] hidden lg:block">
-        <DoodleHeart className="text-primary w-10 h-10" />
+        <DoodleHeart className="text-accent w-12 h-12 opacity-60" />
       </div>
       <div className="absolute bottom-40 left-[8%] hidden lg:block">
-        <DoodleSpiral className="text-accent w-12 h-12" />
+        <DoodleSpiral className="text-purple-soft w-14 h-14 opacity-50" />
       </div>
       <div className="absolute bottom-32 right-[18%] hidden lg:block">
-        <DoodleBolt className="text-secondary w-7 h-10" />
+        <DoodleBolt className="text-secondary w-8 h-12 opacity-70" />
       </div>
       
       <div className="container-custom relative z-10 text-center px-4">
