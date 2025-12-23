@@ -9,10 +9,12 @@ import Investor from "@/components/sections/Investor";
 import Monetization from "@/components/sections/Monetization";
 import TechStack from "@/components/sections/TechStack";
 import CTA from "@/components/sections/CTA";
+import FloatingDoodles from "@/components/Doodles";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <FloatingDoodles />
       <Navbar />
       <Hero />
       <div id="problem">
