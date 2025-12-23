@@ -184,34 +184,34 @@ export const DoodleConfetti = ({ className = "" }: DoodleProps) => (
   />
 );
 
-// Floating shapes component
+// Floating shapes component - light theme version
 export const FloatingDoodles = () => (
   <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
     {/* Pink star */}
-    <DoodleStar className="absolute top-[15%] left-[10%] text-primary opacity-30 float-slow" />
+    <DoodleStar className="absolute top-[15%] left-[10%] text-primary opacity-40" />
     
     {/* Yellow heart */}
-    <DoodleHeart className="absolute top-[25%] right-[15%] text-secondary opacity-25 float-medium" />
+    <DoodleHeart className="absolute top-[25%] right-[15%] text-accent opacity-35" />
     
     {/* Orange spiral */}
-    <DoodleSpiral className="absolute bottom-[30%] left-[8%] text-accent opacity-20 float-fast" />
+    <DoodleSpiral className="absolute bottom-[30%] left-[8%] text-secondary opacity-30" />
     
     {/* Purple circle */}
-    <DoodleCircle className="absolute top-[60%] right-[10%] text-purple-soft opacity-25 float-slow" />
+    <DoodleCircle className="absolute top-[60%] right-[10%] text-purple-soft opacity-40" />
     
     {/* Pink squiggle */}
-    <DoodleSquiggle className="absolute bottom-[20%] right-[20%] text-primary opacity-20" />
+    <DoodleSquiggle className="absolute bottom-[20%] right-[20%] text-primary opacity-30" />
     
     {/* Yellow bolt */}
-    <DoodleBolt className="absolute top-[40%] left-[85%] text-secondary opacity-30 float-medium" />
+    <DoodleBolt className="absolute top-[40%] left-[85%] text-secondary opacity-45" />
     
     {/* Book */}
-    <DoodleBook className="absolute bottom-[45%] left-[15%] text-purple-soft opacity-20" />
+    <DoodleBook className="absolute bottom-[45%] left-[15%] text-accent opacity-30" />
     
     {/* More scattered elements */}
-    <DoodleStar className="absolute top-[70%] left-[70%] text-secondary opacity-20 float-fast" />
-    <DoodleHeart className="absolute top-[10%] left-[50%] text-accent opacity-15 float-slow" />
-    <DoodleCircle className="absolute bottom-[15%] left-[40%] text-primary opacity-20 float-medium" />
+    <DoodleStar className="absolute top-[70%] left-[70%] text-secondary opacity-35" />
+    <DoodleHeart className="absolute top-[10%] left-[50%] text-primary opacity-25" />
+    <DoodleCircle className="absolute bottom-[15%] left-[40%] text-purple-soft opacity-30" />
   </div>
 );
 
