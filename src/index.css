@@ -183,7 +183,7 @@
   .gradient-bg {
     @apply bg-gradient-to-r from-primary via-purple-soft to-accent;
     background-size: 200% auto;
-    animation: gradient-shift 8s ease infinite;
+    animation: gradient-shift 15s ease infinite;
   }
 
   .gradient-border {
