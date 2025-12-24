@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { name: "Problem", href: "#problem" },
@@ -61,8 +62,9 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA with bouncy effect */}
-          <div className="hidden md:block">
+          {/* Theme toggle and CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
             <motion.a
               href="#cta"
               className="px-6 py-2.5 gradient-bg text-primary-foreground font-bold rounded-2xl text-sm inline-flex items-center gap-2"
