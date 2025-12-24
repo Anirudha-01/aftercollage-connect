@@ -134,7 +134,7 @@ export default function AdminDashboard() {
     if (earlyAccess.data) setEarlyAccessData(earlyAccess.data);
   };
 
-  const updateStatus = async (table: string, id: string, status: string) => {
+  const updateStatus = async (table: 'partner_submissions' | 'contact_submissions' | 'early_access_submissions', id: string, status: string) => {
     const { error } = await supabase
       .from(table)
       .update({ status })
