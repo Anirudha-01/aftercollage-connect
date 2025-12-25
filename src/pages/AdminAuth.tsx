@@ -58,13 +58,32 @@ export default function AdminAuth() {
     setIsLoading(true);
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
 
       if (error) {
         toast.error(error.message);
+        return;
+      }
+
+      if (data.session) {
+        // Check admin role directly after login
+        const { data: roles } = await supabase
+          .from('user_roles')
+          .select('role')
+          .eq('user_id', data.session.user.id)
+          .eq('role', 'admin')
+          .maybeSingle();
+
+        if (roles) {
+          toast.success('Welcome back, Admin!');
+          navigate('/admin');
+        } else {
+          toast.error('Access denied. Admin privileges required.');
+          await supabase.auth.signOut();
+        }
       }
     } catch {
       toast.error('An unexpected error occurred');
